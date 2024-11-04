@@ -35,7 +35,7 @@ app.post("/restaurants/:id", async (request, response) => {
 	response.json("Resource successfulley created.");
 });
 
-app.update("/restaurants/:id", async (request, response) => {
+app.put("/restaurants/:id", async (request, response) => {
 	const targetRestaurant = await Restaurant.findByPk(request.params.id);
 	const jsonRestaurant = Restaurant.toJSON();
 
